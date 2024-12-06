@@ -1,7 +1,9 @@
 import cv2
-img=cv2.imread("araba.jpg",cv2.IMREAD_GRAYSCALE)
-cv2.namedWindow("image",cv2.WINDOW_NORMAL)
-cv2.imshow("image",img)
-cv2.imwrite("copy.jpg",img)
+import numpy as np
+
+canvas=np.zeros((512,512,3), dtype=np.uint8) +255
+print(canvas)
+
+cv2.imshow("pencere",canvas)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
